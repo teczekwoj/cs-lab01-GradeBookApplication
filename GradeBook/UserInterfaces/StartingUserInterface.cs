@@ -34,7 +34,7 @@ namespace GradeBook.UserInterfaces
         public static void CreateCommand(string command)
         {
             var parts = command.Split(' ');
-            if (parts.Length != 4)
+            if (parts.Length != 3)
             {
                 Console.WriteLine("Command not valid, Create requires a name and type of gradebook.");
                 return;
@@ -42,7 +42,6 @@ namespace GradeBook.UserInterfaces
 
             var name = parts[1];
             var name1 = parts[2];
-            
             
             BaseGradeBook gradeBook;
             
@@ -56,7 +55,7 @@ namespace GradeBook.UserInterfaces
             }
             else
             {
-                Console.WriteLine("incorrect is not a supported type of gradebook, please try again");
+                Console.WriteLine(parts[2] + "incorrect is not a supported type of gradebook, please try again");
                 return;
             }
             GradeBookUserInterface.CommandLoop(gradeBook);
