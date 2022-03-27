@@ -6,7 +6,7 @@ namespace GradeBook.GradeBooks
 {
     public class StandardGradeBook : BaseGradeBook //klasa dziedzicząca
     {
-        public StandardGradeBook(string name) : base(name) //konstruktor
+        public StandardGradeBook(string name, bool IsWeighted) : base(name, IsWeighted) //konstruktor
         {
             Type = Enums.GradeBookType.Standard;
         }
